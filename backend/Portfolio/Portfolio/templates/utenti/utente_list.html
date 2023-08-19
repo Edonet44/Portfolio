@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--load static va sempre inserito per avviare la cartella static-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Lista Utenti</title>
+</head>
+<body>
+    <h1>Lista Utenti</h1>
+    <ul>
+        {% for utente in utenti %}
+            <li>
+                {{ utente.nome }} {{ utente.cognome }}
+                <a href="{% url 'utente_update' utente.id %}">Aggiorna</a>
+                <a href="{% url 'utente_delete' utente.id %}">Cancella</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

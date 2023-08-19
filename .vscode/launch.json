@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+    "name": "Python: Django",
+    "type": "python",
+    "request": "launch",
+    "program": "${workspaceFolder}/backend/Portfolio/manage.py",
+    "args": [
+        "runserver",
+        "127.0.0.1:8000",  // Aggiungi l'indirizzo e la porta
+        "--noreload"  // Opzionale: evita il ricaricamento automatico
+    ],
+    "django": true,
+    "justMyCode": true,
+    "env": {
+        "BROWSER": "chrome"  // Imposta il browser da aprire
+    }
+},
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Vue Frontend",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
