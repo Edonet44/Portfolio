@@ -1,5 +1,6 @@
 from django.views.generic import ListView
-from Portfolio.models.utenti import Utente
+from Portfolio.models.utenti.utenti import Utente
+
 
 
 class UtenteListView(ListView):

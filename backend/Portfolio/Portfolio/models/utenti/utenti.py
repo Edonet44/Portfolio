@@ -1,6 +1,8 @@
 from django.db import models
+#import uuid
 
 class Utente(models.Model):
+   # id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     nome = models.CharField(max_length=100)
     cognome = models.CharField(max_length=100)
     citta = models.CharField(max_length=100)

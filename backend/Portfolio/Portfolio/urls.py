@@ -15,11 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 from Portfolio.views.utenti_list import UtenteListView
 from Portfolio.views.utenti_create import UtenteCreateView
 from Portfolio.views.utenti_update import UtenteUpdateView
 from Portfolio.views.utenti_delete import UtenteDeleteView
+from Portfolio.models.utenti.views import UtenteListAPIView
+from Portfolio.models.contatti.views import ContattiListAPIView
+from Portfolio.models.jobs.views import JobListAPIView
+from Portfolio.models.blog.views import CategoriaApiViewSet,PostViewApiSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +33,14 @@ urlpatterns = [
     path('utenti/create/', UtenteCreateView.as_view(), name='utente_create'),
     path('utenti/<int:pk>/update/', UtenteUpdateView.as_view(), name='utente_update'),
     path('utenti/<int:pk>/delete/', UtenteDeleteView.as_view(), name='utente_delete'),
+    #path per le api dell utente
+    path('api/v1/utenti/', UtenteListAPIView.as_view(), name='utente-api'),
+    path('api/v1/contatti/', ContattiListAPIView.as_view(), name='contatti-api'),
+    path('api/v1/jobs/', JobListAPIView.as_view(), name='jobs-api'),
+    path('api/v1/categorie/', CategoriaApiViewSet.as_view(({'get': 'list'})), name='categorie-api'),
+    path('api/v1/posts/', PostViewApiSet.as_view({'get': 'list'}), name='posts-api'),
  ]
-    
+#setta la cartella dei media
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

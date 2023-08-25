@@ -13,7 +13,7 @@
     <ul>
         {% for utente in utenti %}
             <li>
-                {{ utente.nome }} {{ utente.cognome }}
+                {{ utente.nome }} {{ utente.cognome }} {{utente.immagine}}
                 <a href="{% url 'utente_update' utente.id %}">Aggiorna</a>
                 <a href="{% url 'utente_delete' utente.id %}">Cancella</a>
             </li>

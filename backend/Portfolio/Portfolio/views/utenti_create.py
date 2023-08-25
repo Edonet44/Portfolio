@@ -1,5 +1,5 @@
 from django.views.generic.edit import CreateView
-from Portfolio.models.utenti import Utente
+from Portfolio.models.utenti.utenti import Utente
 
 class UtenteCreateView(CreateView):
     model = Utente

@@ -27,6 +27,12 @@
             "name": "Launch Vue Frontend",
             "url": "http://localhost:5173",
             "webRoot": "${workspaceFolder}"
-        }
+        },
+        //   {
+        //     "name": "Debug JavaScript",
+        //     "type": "node",
+        //     "request": "launch",
+        //     "program": "${file}"
+        // }
     ]
 }

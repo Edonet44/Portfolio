@@ -1,5 +1,5 @@
 from django.views.generic.edit import UpdateView
-from Portfolio.models.utenti import Utente
+from Portfolio.models.utenti.utenti import Utente
 class UtenteUpdateView(UpdateView):
     model = Utente
     fields = ['nome', 'cognome', 'citta', 'indirizzo', 'immagine', 'git', 'linkedin', 'web']
