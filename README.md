@@ -26,7 +26,7 @@ portfolio/
 |-- .gitignore # File ignorati da Git
 
 
-## Backend (Django) ![Django Icon](inserisci_link_immagine_django)
+## Backend (Django) 
 Il backend del progetto è sviluppato utilizzando il framework Django, noto per la sua scalabilità e facilità d'uso. Le principali funzionalità del backend includono:
 
 - Gestione degli utenti attraverso l'autenticazione e l'autorizzazione.
@@ -36,7 +36,7 @@ Il backend del progetto è sviluppato utilizzando il framework Django, noto per 
 - Utilizzo di serializer per la conversione dei dati tra rappresentazione complessa e JSON.
 
 ## Frontend (Vue.js con Vuetify)
-Il frontend del progetto è costruito utilizzando  ![Vue.js Icon](inserisci_link_immagine_vue) Vue.js, un framework progressivo per la creazione di interfacce utente. Vuetify ![Vuetify Icon](inserisci_link_immagine_vuetify) è utilizzato per aggiungere componenti esteticamente piacevoli e reattivi. Le principali caratteristiche del frontend includono:
+Il frontend del progetto è costruito utilizzando  Vue.js, un framework progressivo per la creazione di interfacce utente. Vuetify è utilizzato per aggiungere componenti esteticamente piacevoli e reattivi. Le principali caratteristiche del frontend includono:
 
 - Layout responsive e moderno utilizzando componenti Vuetify predefiniti.
 - Routing per navigare tra diverse sezioni del portfolio.
